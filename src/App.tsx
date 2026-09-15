@@ -1,8 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
-import ForgotPassword from "./pages/ForgotPassword";
-import AuthAction from "./pages/AuthAction";
 import { ProtectedRoute } from "./lib/auth-context";
 
 function App() {
@@ -10,9 +8,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/auth/action" element={<AuthAction />} />
-        <Route path="/__/auth/action" element={<AuthAction />} />
         <Route
           path="/"
           element={

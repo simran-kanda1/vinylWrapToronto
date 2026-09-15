@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../lib/firebase";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Loader2, Mail, Lock } from "lucide-react";
 import { Button } from "../components/ui-components";
 import { logActivity } from "../lib/activity-logger";
@@ -82,20 +82,12 @@ export default function Login() {
               </div>
             </div>
             <div className="space-y-2">
-              <div className="flex justify-between items-center">
-                <label
-                  className="text-sm font-medium text-slate-700 dark:text-slate-200"
-                  htmlFor="password"
-                >
-                  Password
-                </label>
-                <Link
-                  to="/forgot-password"
-                  className="text-xs font-semibold text-royal-600 hover:text-royal-500 rounded px-1 transition-colors"
-                >
-                  Forgot password?
-                </Link>
-              </div>
+              <label
+                className="text-sm font-medium text-slate-700 dark:text-slate-200"
+                htmlFor="password"
+              >
+                Password
+              </label>
               <div className="relative">
                 <Lock className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
                 <input
