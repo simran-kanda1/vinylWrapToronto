@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Simvana — light surface with #0055FE primary */
+    --background: 220 40% 98%;
+    --foreground: 220 70% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 70% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 70% 8%;
+
+    --primary: 219 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 30% 96%;
+    --secondary-foreground: 220 40% 15%;
+
+    --muted: 220 25% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 204 92% 59%;
+    --accent-foreground: 220 70% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 90%;
+    --input: 220 20% 90%;
+    --ring: 219 100% 50%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 220 70% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 50% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 50% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 219 100% 55%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 30% 15%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 30% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 204 92% 45%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 219 100% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
