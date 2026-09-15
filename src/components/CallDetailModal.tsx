@@ -49,7 +49,7 @@ export function CallDetailModal({ isOpen, onClose, call }: CallDetailModalProps)
           />
 
           <div className="relative w-full max-w-4xl max-h-[90vh] bg-white dark:bg-slate-900 rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-slate-200 dark:border-slate-800">
-            <div className="flex-none p-6 bg-gradient-to-r from-royal-900 to-royal-600 text-white flex justify-between items-start">
+            <div className="flex-none p-6 bg-royal-900 text-white flex justify-between items-start">
               <div className="flex items-center gap-4">
                 <span className="p-3 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
                   <Phone className="w-8 h-8" />
