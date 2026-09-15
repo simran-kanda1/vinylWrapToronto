@@ -21,6 +21,18 @@ npm install
 npm run dev
 ```
 
+## Render (important)
+
+Do **not** use a Static Site — it has no `/api/calls` proxy, so Retell fallback won't work and the dashboard can look empty until Firestore is populated.
+
+Use a **Web Service** instead:
+
+- Build: `npm install && npm run build`
+- Start: `npm start`
+- Env vars: all `VITE_FIREBASE_*`, plus `RETELL_API_KEY`, `RETELL_AGENT_ID`
+
+Or connect the repo with `render.yaml` (Web Service).
+
 ## Firebase Function (Retell webhook)
 
 ```bash
