@@ -10,7 +10,7 @@ Simvana client dashboard + Firebase webhook for the **Vinyl Wraps Toronto Recept
 
 - Firebase email/password login
 - Calls stored in Firestore via `retellWebhook`
-- Owner-voicemail emails via Gmail SMTP → `simrankaurkanda42@gmail.com`
+- Owner-voicemail emails via Gmail SMTP → `paolo@10xid.com`
 - Dashboard: outcomes, reason, transcript, recording playback
 - Simvana brand colors
 

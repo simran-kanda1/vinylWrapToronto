@@ -13,13 +13,13 @@ const db = getFirestore();
 
 const GMAIL_USER = defineString("GMAIL_USER", {
   default: "simrankaurkanda42@gmail.com",
-  description: "Gmail address used as SMTP from/to for owner voicemail alerts",
+  description: "Gmail address used as SMTP from for owner voicemail alerts",
 });
 const GMAIL_APP_PASSWORD = defineString("GMAIL_APP_PASSWORD", {
   description: "Gmail App Password (not your normal login password)",
 });
 
-const DEFAULT_EMAIL = "simrankaurkanda42@gmail.com";
+const OWNER_EMAIL_TO = "paolo@10xid.com";
 const AGENT_PHONE = "+16479316932";
 const AGENT_ID = "agent_7a12089ba145180dc927df2c2d";
 
@@ -122,7 +122,7 @@ async function sendOwnerVoicemailEmail(params: {
 
   await transporter.sendMail({
     from: `"Vinyl Wraps Toronto VA" <${gmailUser}>`,
-    to: DEFAULT_EMAIL,
+    to: OWNER_EMAIL_TO,
     subject,
     text,
     html,
@@ -229,7 +229,7 @@ export const retellWebhook = onRequest(
         (event === "call_analyzed" || (event === "call_ended" && Boolean(fields.voicemailMessage)));
 
       if (shouldSendNow) {
-        const gmailUser = (GMAIL_USER.value() || DEFAULT_EMAIL).trim();
+        const gmailUser = (GMAIL_USER.value() || "simrankaurkanda42@gmail.com").trim();
         const gmailPass = (GMAIL_APP_PASSWORD.value() || "").trim();
 
         if (!gmailPass) {
@@ -256,7 +256,7 @@ export const retellWebhook = onRequest(
               {
                 emailSent: true,
                 emailSentAt: FieldValue.serverTimestamp(),
-                emailRecipient: DEFAULT_EMAIL,
+                emailRecipient: OWNER_EMAIL_TO,
                 emailError: FieldValue.delete(),
               },
               { merge: true }
